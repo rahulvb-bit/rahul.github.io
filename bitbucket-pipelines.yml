@@ -11,7 +11,7 @@ pipelines:
           - git config --global user.email "rahul.borade@parseq.com"
           - git config --global user.name "Bitbucket Pipeline Bot"
           # Clone the GitHub repo into 'deploy' directory
-          - git clone --depth=1 https://x-access-token:${github_token}@github.com/rahulvb-bit/rahul.github.io.git deploy
+          - git clone --depth=1 https://x-access-token:${github_token1}@github.com/rahulvb-bit/rahul.github.io.git deploy
           # Use rsync to copy everything except the 'deploy' folder and the local .git folder
           - rsync -av --exclude=deploy --exclude=.git ./ deploy/
           # Move into the deploy directory
